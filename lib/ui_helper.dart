@@ -18,4 +18,12 @@ class UiHelper {
       return EdgeInsets.all(8.w);
     }
   }
+  static  double calculatePokeImgAndBallSize(){
+if (ScreenUtil().orientation == Orientation.portrait) {
+      return 0.2.sw;
+    } else {
+      return 0.3.sh;
+    }
+    
+  }
 }

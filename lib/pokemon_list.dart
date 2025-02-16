@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pokedex/model.dart';
 import 'package:pokedex/pokedex_api.dart';
+import 'package:pokedex/pokelist_item.dart';
 
 class PokemonList extends StatefulWidget {
   const PokemonList({super.key});
@@ -11,25 +13,29 @@ class PokemonList extends StatefulWidget {
 
 class _PokemonListState extends State<PokemonList> {
   late Future<List<PokemonModel>> _pokemonList;
-    @override
+  @override
   void initState() {
-    // TODO: implement initState
+    
     super.initState();
     _pokemonList = PokeApi.getPokemonData();
   }
+
   @override
   Widget build(BuildContext context) {
+    debugPrint("pokemonlistbuild çalıştı");
     return FutureBuilder<List<PokemonModel>>(
       future: _pokemonList,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           List<PokemonModel> _listem = snapshot.data!;
-          return ListView.builder(
-              itemCount: _listem.length,
+          return GridView.builder(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount:
+                      ScreenUtil().orientation == Orientation.portrait ? 2 : 3),
               itemBuilder: (context, index) {
-                var oankiPokemon = _listem[index];
-                return ListTile(
-                  title: Text(oankiPokemon.name.toString()),
+                debugPrint("item builder  çalıştı");
+                return PokelistItem(
+                  pokemon: _listem[index],
                 );
               });
         } else if (snapshot.hasError) {

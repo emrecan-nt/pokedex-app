@@ -5,7 +5,7 @@ class Constants {
   static const String title = "pokedex";
 
   static TextStyle getTitleTextStyle() {
-    return  TextStyle(
+    return TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.bold,
       fontSize: _calculateFontSize(48),
@@ -13,10 +13,10 @@ class Constants {
   }
 
   static TextStyle getPokemonNameTextStyle() {
-    return  TextStyle(
+    return TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.bold,
-      fontSize: _calculateFontSize(30),
+      fontSize: _calculateFontSize(24),
     );
   }
 
@@ -31,7 +31,21 @@ class Constants {
     if (ScreenUtil().orientation == Orientation.portrait) {
       return size.sp;
     } else {
-      return (size * 1.6).sp;
+      return (size * 1).sp;
     }
+  }
+
+  static getPokemonInfoTextStyle() {
+    return TextStyle(
+      fontSize: _calculateFontSize(16),
+      color: Colors.black,
+    );
+  }
+  static getPokemonInfolabelTextStyle() {
+    return TextStyle(
+      fontSize: _calculateFontSize(20),
+      color: Colors.black,
+      fontWeight: FontWeight.bold,
+    );
   }
 }

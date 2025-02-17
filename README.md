@@ -1,16 +1,59 @@
-# pokedex
+Pokédex Flutter Uygulaması
 
-A new Flutter project.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+Bu Flutter uygulaması, Biuni/PokemonGo-pokedex kaynağındaki JSON verisini kullanarak bir Pokédex oluşturur. Uygulama, kullanıcılara Pokémon'ları listeleme, detaylarını görüntüleme ve arama gibi özellikler sunar.
 
-A few resources to get you started if this is your first Flutter project:
+🚀 Özellikler
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+📜 Pokémon listesini JSON verisinden çekme
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+🔍 Pokémon detay sayfası
+
+🕵️ Arama ve filtreleme fonksiyonları
+
+🎨 Görsel olarak zengin bir tasarım
+
+📸 Ekran Görüntüleri
+
+Ana Sayfa
+
+
+
+Pokémon Detay Sayfası
+
+
+
+🛠 Kullanılan Teknolojiler
+
+Flutter
+
+Dart
+
+HTTP
+
+JSON Veri Kullanımı
+
+⚙️ Kurulum
+
+Flutter'ın kurulu olduğundan emin olun.
+
+Depoyu klonlayın:
+
+git clone https://github.com/kullaniciadi/pokedex_flutter.git
+
+Bağımlılıkları yükleyin:
+
+flutter pub get
+
+Uygulamayı çalıştırın:
+
+flutter run
+
+📚 Kaynaklar
+
+JSON Verisi: Biuni/PokemonGo-pokedex
+
+Görseller uygulamada dinamik olarak JSON verisinden çekilmektedir.
+
+Bu proje Flutter ile mobil geliştirme yeni başlayanlar için harika bir çalışma alanı sunar. Katkıda bulunmak isteyenler çekinmeden pull request gönderebilir! 🎉
